@@ -1,6 +1,6 @@
 '''
     Difference is, as problem statement clearly states, arrays are sorted !
-    So check for duplicates in same array for just last element ! that it !
+    So check for duplicates in same array for just last element ! that's it !
     Because of sorting !
 '''
 
