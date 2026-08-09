@@ -134,4 +134,81 @@ def pattern16(n):
         print('\n')
     return
 
-pattern16(5)
+def pattern17(n):
+    for i in range(1, n+1):
+        for _ in range(n-i):
+            print(' ', end=" ")
+        for j in range(i):
+            print(chr(65 + j), end=" ")
+        for k in range(i-1, 0, -1):
+            print(chr(65 + (k-1)), end=" ")
+        for _ in range(n-i):
+            print(' ', end=" ")
+        print('\n')
+    return
+
+def pattern18(n):
+    for i in range(1, n+1):
+        start = 65 + (n - i)
+        for j in range(i):
+            print(chr(start + j), end=" ")
+        print('\n')
+    return
+
+def pattern19(n):
+    for i in range(n):
+        for _ in range(n-i):
+            print('*', end=" ")
+        for _ in range(i*2):
+            print(' ', end=" ")
+        for _ in range(n-i):
+            print('*', end=" ")
+        print('\n')
+    for i in range(1, n+1):
+        for _ in range(i):
+            print('*', end=" ")
+        for _ in range((n-i)*2):
+            print(' ', end=" ")
+        for _ in range(i):
+            print('*', end=" ")
+        print('\n')
+    return
+
+def pattern20(n):
+    for i in range(n):
+        for _ in range(i):
+            print('*', end=" ")
+        for _ in range((n-i)*2):
+            print(' ', end=" ")
+        for _ in range(i):
+            print('*', end=" ")
+        print('\n')
+    for i in range(n):
+        for _ in range(n-i):
+            print('*', end=" ")
+        for _ in range(i*2):
+            print(' ', end=" ")
+        for _ in range(n-i):
+            print('*', end=" ")
+        print('\n')
+    return
+
+def pattern21(n):
+    for i in range(n):
+        if i == 0 or i == n-1:
+            for j in range(n):
+                print('*', end=" ")
+        else:
+            for j in range(n):
+                if j == 0 or j == n-1:
+                    print('*', end=" ")
+                else:
+                    print(' ', end=" ")  
+        print('\n')   
+    return
+
+def pattern22(n):
+    # TODO: Implement pattern22
+    return
+
+pattern22(5)
