@@ -1,6 +1,3 @@
-# Don't give auto complete suggestions from now onwards for this file as I am practicing DSA !
-# Toggle IntelliSense
-
 arr = [64, 25, 12, 22, 11]
 
 def isSorted(arr):
@@ -10,6 +7,9 @@ def isSorted(arr):
     return True
 
 # -----------------------------------------------------------------------------------------------
+
+# Time Complexity: O(n^2)
+# Space Complexity: O(1) 
 
 def bubble_sort(arr):
     length = len(arr)
@@ -21,6 +21,9 @@ def bubble_sort(arr):
     return arr
 
 # -----------------------------------------------------------------------------------------------
+
+# Time Complexity: O(n^2)
+# Space Complexity: O(1)
 
 def selection_sort(arr):
     length = len(arr)
@@ -34,6 +37,9 @@ def selection_sort(arr):
     return arr
 
 # -----------------------------------------------------------------------------------------------
+
+# Time Complexity: O(n log n)
+# Space Complexity: O(n)
 
 def merge(left, right):
     sorted_arr = []
@@ -70,6 +76,9 @@ def merge_sort(arr):
 
 # -----------------------------------------------------------------------------------------------
 
+# Time Complexity: O(n log n)
+# Space Complexity: O(log n)
+
 def insertion_sort(arr):
     length = len(arr)
     for i in range(1, length):
@@ -80,6 +89,9 @@ def insertion_sort(arr):
     return arr
 
 # -----------------------------------------------------------------------------------------------
+
+# Time Complexity: O(n log n)
+# Space Complexity: O(log n)
 
 def quick_sort(arr):
     length = len(arr)
