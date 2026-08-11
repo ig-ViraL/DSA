@@ -11,26 +11,25 @@ def rotate_array(arr, by, direction):
     shifts = by % len(arr)
     print("Normalized Shift by :", str(shifts), direction)
 
-    match direction:
-        case "right":
-            arr.reverse()
-            first_half = arr[:shifts]
-            second_half = arr[shifts:]
-            first_half.reverse()
-            second_half.reverse()
-            return first_half + second_half
+    if direction == "right":
+        arr.reverse()
+        first_half = arr[:shifts]
+        second_half = arr[shifts:]
+        first_half.reverse()
+        second_half.reverse()
+        return first_half + second_half
 
-        case "left":
-            first_half = arr[:shifts]
-            second_half = arr[shifts:]
-            first_half.reverse()
-            second_half.reverse()
-            final_arr = first_half + second_half
-            final_arr.reverse()
-            return final_arr
+    elif direction == "left":
+        first_half = arr[:shifts]
+        second_half = arr[shifts:]
+        first_half.reverse()
+        second_half.reverse()
+        final_arr = first_half + second_half
+        final_arr.reverse()
+        return final_arr
 
-        case _:
-            raise Exception(f"Invalid rotate direction ! Wtf is : {direction}")
+    else:
+        raise Exception(f"Invalid rotate direction ! Wtf is : {direction}")
 
 
 print(rotate_array(arr, 6, "right"))
