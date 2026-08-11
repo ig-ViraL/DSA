@@ -208,7 +208,12 @@ def pattern21(n):
     return
 
 def pattern22(n):
-    # TODO: Implement pattern22
+    size = 2 * n - 1
+    center = n - 1
+    for i in range(size):
+        for j in range(size):
+            print(max(abs(i - center), abs(j - center)) + 1, end=" ")
+        print()
     return
 
-pattern22(5)
+pattern22(4)
