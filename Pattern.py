@@ -1,6 +1,3 @@
-# Don't give auto complete suggestions from now onwards for this file as I am practicing DSA !
-# Toggle IntelliSense
-
 def pattern1(n):
     for i in range(n):
         for j in range(n):
