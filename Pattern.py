@@ -1,13 +1,13 @@
 def pattern1(n):
-    for i in range(n):
-        for j in range(n):
+    for _ in range(n):
+        for _ in range(n):
             print("*", end=" ")
         print('\n')
     return
 
 def pattern2(n):
     for i in range(n):
-        for j in range(i+1):
+        for _ in range(i+1):
             print('*', end=" ")
         print('\n')
     return
@@ -21,14 +21,14 @@ def pattern3(n):
 
 def pattern4(n):
     for i in range(n):
-        for j in range(i+1):
+        for _ in range(i+1):
             print(i+1, end=" ")
         print('\n')
     return
 
 def pattern5(n):
     for i in range(n):
-        for j in range(n, i, -1):
+        for _ in range(n, i, -1):
             print('*', end=" ")
         print('\n')
     return
@@ -36,7 +36,7 @@ def pattern5(n):
 def pattern6(n):
     for i in range(n):
         num = 1
-        for j in range(n, i, -1):
+        for _ in range(n, i, -1):
             print(num, end=" ")
             num += 1
         print('\n')
