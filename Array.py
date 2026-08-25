@@ -102,4 +102,41 @@ def move0ToEnd(arr):
         j += 1
     return arr
 
-print(move0ToEnd(arr))
+def findUniqueNumber(arr):
+    seen = {}
+    unique_numbers = {}
+    for num in arr:
+        if num not in seen:
+            seen[num] = 1
+            unique_numbers[num] = 1
+        else:
+            unique_numbers.pop(num, None)
+    return list(unique_numbers.keys())[0] if unique_numbers else None
+
+def longestSubarrayWithSumK(arr, k):
+    longest_length = 0
+
+    for i in range(len(arr)):
+        current_sum = 0
+        for j in range(i, len(arr)):
+            current_sum += arr[j]
+            if current_sum == k:
+                longest_length = max(longest_length, j - i + 1)
+    return longest_length
+
+def longestSubarrayWithSumKOptimized(arr, k):
+    longest_length = 0
+    left = right = 0
+
+    while right < len(arr):
+        current_sum = sum(arr[left:right + 1])
+        if current_sum < k:
+            right += 1
+        elif current_sum > k:
+            left += 1
+        else:
+            longest_length = max(longest_length, right - left + 1)
+            right += 1
+    return longest_length
+
+print(longestSubarrayWithSumK(arr, 3))
