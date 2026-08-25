@@ -61,9 +61,6 @@ def rotate_array(arr, by, direction):
     else:
         raise Exception(f"Invalid rotate direction ! Wtf is : {direction}")
 
-
-print(removeDuplicatesFromSortedArray(arr))
-
 # Medium problems
 
 def twoSum(arr, target):
@@ -94,4 +91,15 @@ def sort012():
 
     return arr
 
-print(sort012())
+arr = [1 ,0 ,2 ,3 ,0 ,4 ,0 ,1]
+
+def move0ToEnd(arr):
+    i = j = 0
+    while j < len(arr):
+        if arr[j] != 0:
+            arr[i], arr[j] = arr[j], arr[i]
+            i += 1
+        j += 1
+    return arr
+
+print(move0ToEnd(arr))
